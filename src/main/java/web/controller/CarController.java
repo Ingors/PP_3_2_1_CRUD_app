@@ -16,7 +16,7 @@ public class CarController {
         this.service = service;
     }
     @GetMapping(value = "/cars")
-    public String getCars(@RequestParam(value = "amount", required = false, defaultValue = "5") int amount, ModelMap model) {
+    public String getCars(@RequestParam(value = "count", required = false, defaultValue = "5") int amount, ModelMap model) {
         model.addAttribute("getCars", service.getCars(amount));
         return "/cars";
 
